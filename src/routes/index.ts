@@ -1,6 +1,6 @@
 import express from "express";
 var router = express.Router();
-import accountsRouter from "./accountRouter";
+import accountsRouter from "./account.router";
 
 router.use("/accounts", accountsRouter);
 
