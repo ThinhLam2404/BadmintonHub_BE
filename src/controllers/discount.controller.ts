@@ -8,7 +8,7 @@ const createDiscount = async (req: Request, res: Response, next: NextFunction) =
         if (result) {
             res.status(200).json({ message: "Discount created successfully" });
         } else {
-            res.status(500).json({ message: "Failed to create brand" });
+            res.status(500).json({ message: "Failed to create discount" });
         }
     } catch (error) {
         console.log(error);
@@ -22,7 +22,7 @@ const editDiscount = async (req: Request, res: Response, next: NextFunction) => 
         if (result) {
             res.status(200).json({ message: "Discount updated successfully" });
         } else {
-            res.status(500).json({ message: "Failed to update brand" });
+            res.status(500).json({ message: "Failed to update discount" });
         }
     } catch (error) {
         console.log(error);
@@ -35,7 +35,7 @@ const getDiscountList = async (req: Request, res: Response, next: NextFunction) 
         if (result) {
             res.status(200).json(result);
         } else {
-            res.status(500).json({ message: "Failed to get brand list" });
+            res.status(500).json({ message: "Failed to get discount list" });
         }
     } catch (error) {
         console.log(error);
@@ -44,12 +44,12 @@ const getDiscountList = async (req: Request, res: Response, next: NextFunction) 
 
 const deleteDiscount = async (req: Request, res: Response, next: NextFunction) => {
     try {
-        const { brand_id } = req.body;
-        const result = await discountService.deleteDiscount(brand_id);
+        const { discount_id } = req.body;
+        const result = await discountService.deleteDiscount(discount_id);
         if (result) {
             res.status(200).json({ message: "Discount deleted successfully" });
         } else {
-            res.status(500).json({ message: "Failed to delete brand" });
+            res.status(500).json({ message: "Failed to delete discount" });
         }
     } catch (error) {
         console.log(error);
@@ -62,7 +62,7 @@ const getValidDiscounts = async (req: Request, res: Response, next: NextFunction
         if (result) {
             res.status(200).json(result);
         } else {
-            res.status(500).json({ message: "Failed to get brand list" });
+            res.status(500).json({ message: "Failed to get discount list" });
         }
     } catch (error) {
         console.log(error);

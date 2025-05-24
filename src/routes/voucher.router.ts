@@ -6,6 +6,6 @@ router.post("/", createVoucher);
 router.get("/", getVoucherList);
 router.put("/:id", editVoucher);
 router.delete("/:id", deleteVoucher);
-router.get("/validVoucher", getVoucherList);
+router.get("/valid-voucher", getVoucherList);
 
 export default router;

@@ -1,5 +1,5 @@
 import Brand from '../models/brand';
-import { BrandResponse } from '../response/brandResponse';
+import { BrandResponse } from '../responses/brand.response';
 
 const brandService = {
  createBrand: async (name: string, description: string): Promise<boolean> => {

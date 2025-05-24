@@ -1,5 +1,5 @@
 import Discount from '../models/discount';
-import { DiscountResponse } from '../response/discountResponse';
+import { DiscountResponse } from '../responses/discount.response';
 
 const discountService = {
  createDiscount: async (percent: number, expired_at: Date): Promise<boolean> => {

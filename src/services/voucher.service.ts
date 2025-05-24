@@ -1,5 +1,5 @@
 import Voucher from '../models/voucher';
-import { VoucherResponse } from '../response/voucherResponse';
+import { VoucherResponse } from '../responses/voucher.response';
 
 const voucherService = {
  createVoucher: async (percent: number, expired_at: Date): Promise<boolean> => {

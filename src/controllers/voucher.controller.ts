@@ -8,7 +8,7 @@ const createVoucher = async (req: Request, res: Response, next: NextFunction) =>
         if (result) {
             res.status(200).json({ message: "Voucher created successfully" });
         } else {
-            res.status(500).json({ message: "Failed to create brand" });
+            res.status(500).json({ message: "Failed to create voucher" });
         }
     } catch (error) {
         console.log(error);
@@ -22,7 +22,7 @@ const editVoucher = async (req: Request, res: Response, next: NextFunction) => {
         if (result) {
             res.status(200).json({ message: "Voucher updated successfully" });
         } else {
-            res.status(500).json({ message: "Failed to update brand" });
+            res.status(500).json({ message: "Failed to update voucher" });
         }
     } catch (error) {
         console.log(error);
@@ -35,7 +35,7 @@ const getVoucherList = async (req: Request, res: Response, next: NextFunction) =
         if (result) {
             res.status(200).json(result);
         } else {
-            res.status(500).json({ message: "Failed to get brand list" });
+            res.status(500).json({ message: "Failed to get voucher list" });
         }
     } catch (error) {
         console.log(error);
@@ -44,12 +44,12 @@ const getVoucherList = async (req: Request, res: Response, next: NextFunction) =
 
 const deleteVoucher = async (req: Request, res: Response, next: NextFunction) => {
     try {
-        const { brand_id } = req.body;
-        const result = await voucherService.deleteVoucher(brand_id);
+        const { voucher_id } = req.body;
+        const result = await voucherService.deleteVoucher(voucher_id);
         if (result) {
             res.status(200).json({ message: "Voucher deleted successfully" });
         } else {
-            res.status(500).json({ message: "Failed to delete brand" });
+            res.status(500).json({ message: "Failed to delete voucher" });
         }
     } catch (error) {
         console.log(error);
@@ -62,7 +62,7 @@ const getValidVouchers = async (req: Request, res: Response, next: NextFunction)
         if (result) {
             res.status(200).json(result);
         } else {
-            res.status(500).json({ message: "Failed to get brand list" });
+            res.status(500).json({ message: "Failed to get voucher list" });
         }
     } catch (error) {
         console.log(error);
